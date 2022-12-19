@@ -1,0 +1,42 @@
+@use "sass:map";
+
+$min-contrast-ratio: 4.5;
+
+$colors: (
+    "primary": #042e5c,
+    "secondary": #a54657,
+    "dark": #222,
+    "light": white,
+    "white": white,
+);
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+);
+
+$font-weights: (
+    lighter: lighter,    
+    normal: normal,
+    bold: bold,
+    bolder: bolder,
+);
+
+$spacer: 1rem;
+
+$spacing: (
+    0: 0,
+    1: $spacer*.25,
+    2: $spacer*.5,
+    3: $spacer,
+    4: $spacer*2,
+    5: $spacer*3,
+);
+
+@function get_color($name) {
+    @return map.get($colors, $name)
+}

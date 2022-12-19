@@ -1,0 +1,43 @@
+@use "bootstrap2" as *;
+
+.contact {
+    display: grid;
+    align-items: center;
+    grid-template-columns: minmax(150px, 0.5fr) 1fr;
+    grid-template-rows: repeat(5, min-content);
+    gap: $spacer * 0.5;
+    @include media-bp-up(lg) {
+        gap: $spacer;
+    }
+
+    border: 2px solid black;
+    
+    @include x(margin, auto);
+    width: 97.5%;
+    padding: 1.25%;
+    @include media-bp-up(md) {
+        width: 95%;
+    }
+    @include media-bp-up(lg) {
+        width: 85%;
+        grid-template-columns: minmax(25%, 300px) 1fr minmax(20%, 300px);
+    }
+    input, textarea {
+        width: 100%;
+        font-size: 1.5rem;
+        @include media-bp-up(lg) {
+        font-size: 2rem;
+        
+        }
+    }
+    &__field--middle {
+        grid-column: 2;
+    }
+    &__img-container {
+        align-self: start;
+        grid-row: 1 / span 4;
+    }
+    &__field--full-width {
+        grid-column: 1 / -1;
+    }
+}

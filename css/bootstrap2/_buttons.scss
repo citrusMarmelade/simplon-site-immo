@@ -1,0 +1,15 @@
+@use "variables" as *;
+@use "mixins" as *;
+.btn {
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    @each $name, $color in $colors {
+        &-#{$name} {
+            border-style: solid;
+            border-width: 1px;
+            border-color: darken($color, 15%);
+            @include bg($color);
+        }
+    }
+}
+
