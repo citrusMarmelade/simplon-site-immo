@@ -1,0 +1,10 @@
+@use "bootstrap2" as *;
+
+.images {
+    background-color: mix(white, get_color(primary), 80%);
+    border: 1px get_color(primary) solid;
+
+    &__description {
+        @include x(padding, 1rem);
+    }
+}

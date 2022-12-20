@@ -1,0 +1,9 @@
+@use "bootstrap2" as *;
+@mixin block {
+    max-width: 1500px;
+}
+
+.container {
+    @include block;
+    @include x(margin, auto);
+}

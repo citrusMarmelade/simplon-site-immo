@@ -1,39 +1,49 @@
 @use "bootstrap2" as *;
+@use "common" as *;
 
 .contact {
+    @include block;
+    background: mix(white, get_color(secondary), 80%);
+
     display: grid;
     align-items: center;
-    grid-template-columns: minmax(150px, 0.5fr) 1fr;
+    grid-template-columns: minmax(120px, 0.5fr) 1fr;
     grid-template-rows: repeat(5, min-content);
     gap: $spacer * 0.5;
+    padding: $spacer * 0.5;
     @include media-bp-up(lg) {
         gap: $spacer;
+        grid-template-rows: repeat(5, 1fr);
     }
 
-    border: 2px solid black;
-    
+    border: 2px solid get_color(dark);
+    border-radius: 0 $spacer 0 $spacer;
+
     @include x(margin, auto);
     width: 97.5%;
-    padding: 1.25%;
+
     @include media-bp-up(md) {
         width: 95%;
     }
-    @include media-bp-up(lg) {
+    @include media-bp-up(xl) {
         width: 85%;
-        grid-template-columns: minmax(25%, 300px) 1fr minmax(20%, 300px);
+        grid-template-columns: minmax(100px, 300px) minmax(300px, 1fr) minmax(100px, 300px);
     }
-    input, textarea {
+    input,
+    textarea,
+    .btn {
         width: 100%;
         font-size: 1.5rem;
         @include media-bp-up(lg) {
-        font-size: 2rem;
-        
+            font-size: 2rem;
         }
     }
     &__field--middle {
         grid-column: 2;
     }
     &__img-container {
+        margin-top: calc($spacer * -0.5 - 2px);
+        margin-left: calc($spacer * -0.5 - 2px);
         align-self: start;
         grid-row: 1 / span 4;
     }

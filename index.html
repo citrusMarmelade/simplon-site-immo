@@ -1,32 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 700,
+                'GRAD' 0,
+                'opsz' 48
+        }
+    </style>
     <title>Document</title>
 </head>
-<body>
-    <h1>Titre Principal</h1>
-    <h2></h2>
-    <img src="" alt="">
-    <div class="carousel"></div>
-    <section>
-        <h2>Voir aussi...</h2>
-    </section>
 
-    <form class="contact">
-        <div class="contact__img-container"><img class="img-responsive" src="images/olivier.png" width="200" alt=""></div>
-        <h2>Intéréssés ?<br>
-            Je reste a votre disposition</h2>
-            <a href="tel:+33666666666" class="btn btn-secondary contact__field--middle">06 66 66 66 66</a>
-        
+<body>
+    <nav>
+
+    </nav>
+    <main>
+        <h1 class="text-center">Titre Principal</h1>
+        <h2 class="text-center">Titre Secondaire</h2>
+        <section class="container images">
+            <img class="w-100" src="/images/principale.jpg" alt="JE SUIS UNE IMAGE">
+            <div class="splide">
+                <div class="splide__track">
+                    <div class="splide__list">
+                        <div class="splide__slide"><img src="/images/miniatures/1.jpg" alt=""></div>
+                        <div class="splide__slide"><img src="/images/miniatures/2.jpg" alt=""></div>
+                        <div class="splide__slide"><img src="/images/miniatures/3.jpg" alt=""></div>
+                        <div class="splide__slide"><img src="/images/miniatures/4.jpg" alt=""></div>
+                        <div class="splide__slide"><img src="/images/miniatures/5.jpg" alt=""></div>
+                        <div class="splide__slide"><img src="/images/miniatures/6.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <p class="h4 images__description">
+                À vendre : maison de charme située dans un quartier paisible et verdoyant. Cette maison de 2 chambres et
+                1 salles de bain offre un espace de vie confortable et accueillant, avec une grande cuisine ouverte sur
+                le salon.<br>
+
+                Le jardin bien entretenu et clos de mur offre une oasis de verdure et de tranquillité, parfait pour se
+                détendre ou recevoir en toute intimité.<br>
+
+                La maison dispose également d'un garage attenant et d'un grand grenier aménageable, offrant de
+                nombreuses possibilités d'agrandissement ou de rangement.<br>
+
+                Proche de toutes les commodités et bien desservie par les transports en commun, cette maison est idéale
+                pour une famille en quête de calme et de confort.<br>
+            </p>
+            <div class="images__attributes attributes">
+                <div><span class="material-symbols-outlined">nest_multi_room</span> 5 pieces</div>
+                <div><span class="material-symbols-outlined">bedroom_parent</span> 2 chambres</div>
+                <div><span class="material-symbols-outlined">garage_home</span> 1 garage</div>
+                <div><span class="material-symbols-outlined">outdoor_garden</span> jardin</div>
+            </div>
+        </section>
+        <aside>
+            <h2>Voir aussi...</h2>
+        </aside>
+
+        <form class="contact">
+            <div class="contact__img-container"><img class="img-responsive" src="images/olivier.png" width="200" alt="">
+            </div>
+            <h2 class="textsize-3">Intéréssés ?<br>
+                Je reste a votre disposition</h2>
+            <a href="tel:+33666666666" class="btn btn-secondary text-center contact__field--middle">06 66 66 66 66</a>
+
             <input class="contact__field--middle" type="text" name="prenom" placeholder="Prénom">
             <input class="contact__field--middle" type="text" name="nom" placeholder="Nom">
             <input class="contact__field--full-width" type="text" name="email" placeholder="Email">
-            <textarea class="contact__field--full-width" name="message" placeholder="message" cols="1" rows="1"></textarea>
+            <textarea class="contact__field--full-width" name="message" placeholder="message" cols="1"
+                rows="1"></textarea>
             <button class="btn btn-primary contact__field--full-width" type="submit">Envoyer</button>
         </form>
+    </main>
+    <script src="https://unpkg.com/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script>
+        var splide = new Splide('.splide', {
+            type: 'loop',
+            autoWidth: true,
+            focus: 'center',
+        });
+
+        splide.mount();
+    </script>
 </body>
+
 </html>

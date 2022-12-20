@@ -2,7 +2,7 @@
 @use "mixins" as *;
 .btn {
     border-radius: 0.5rem;
-    padding: 0.5rem;
+    padding: 0.25rem;
     @each $name, $color in $colors {
         &-#{$name} {
             border-style: solid;

@@ -2485,9 +2485,57 @@ h1, h2, h3, h4, h5, h6 {
   height: auto;
 }
 
+@media screen and (min-width: 1200px) {
+  .h1,
+h1 {
+    font-size: 2.5rem;
+  }
+  .h2,
+h2 {
+    font-size: 2rem;
+  }
+  .h3,
+h3 {
+    font-size: 1.75rem;
+  }
+  .h4,
+h4 {
+    font-size: 1.5rem;
+  }
+}
+.h1,
+h1 {
+  font-size: calc(1.375rem + 1.5vw);
+}
+
+.h2,
+h2 {
+  font-size: calc(1.325rem + 0.9vw);
+}
+
+.h3,
+h3 {
+  font-size: calc(1.3rem + 0.6vw);
+}
+
+.h4,
+h4 {
+  font-size: calc(1.275rem + 0.3vw);
+}
+
+.h5,
+h5 {
+  font-size: 1.25rem;
+}
+
+.h6,
+h6 {
+  font-size: 1rem;
+}
+
 .btn {
   border-radius: 0.5rem;
-  padding: 0.5rem;
+  padding: 0.25rem;
 }
 .btn-primary {
   border-style: solid;
@@ -2525,22 +2573,32 @@ h1, h2, h3, h4, h5, h6 {
   color: #222;
 }
 
+.container {
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .contact {
+  max-width: 1500px;
+  background: #eddadd;
   display: grid;
   align-items: center;
-  grid-template-columns: minmax(150px, 0.5fr) 1fr;
+  grid-template-columns: minmax(120px, 0.5fr) 1fr;
   grid-template-rows: repeat(5, -webkit-min-content);
   grid-template-rows: repeat(5, min-content);
   gap: 0.5rem;
-  border: 2px solid black;
+  padding: 0.5rem;
+  border: 2px solid #222;
+  border-radius: 0 1rem 0 1rem;
   margin-left: auto;
   margin-right: auto;
   width: 97.5%;
-  padding: 1.25%;
 }
 @media screen and (min-width: 992px) {
   .contact {
     gap: 1rem;
+    grid-template-rows: repeat(5, 1fr);
   }
 }
 @media screen and (min-width: 768px) {
@@ -2548,18 +2606,22 @@ h1, h2, h3, h4, h5, h6 {
     width: 95%;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .contact {
     width: 85%;
-    grid-template-columns: minmax(25%, 300px) 1fr minmax(20%, 300px);
+    grid-template-columns: minmax(100px, 300px) minmax(300px, 1fr) minmax(100px, 300px);
   }
 }
-.contact input, .contact textarea {
+.contact input,
+.contact textarea,
+.contact .btn {
   width: 100%;
   font-size: 1.5rem;
 }
 @media screen and (min-width: 992px) {
-  .contact input, .contact textarea {
+  .contact input,
+.contact textarea,
+.contact .btn {
     font-size: 2rem;
   }
 }
@@ -2567,9 +2629,66 @@ h1, h2, h3, h4, h5, h6 {
   grid-column: 2;
 }
 .contact__img-container {
+  margin-top: calc(-0.5rem - 2px);
+  margin-left: calc(-0.5rem - 2px);
   align-self: start;
   grid-row: 1/span 4;
 }
 .contact__field--full-width {
   grid-column: 1/-1;
+}
+
+.splide {
+  height: 200px;
+}
+@media screen and (min-width: 992px) {
+  .splide {
+    height: 300px;
+  }
+  .splide__slide {
+    width: 399px;
+  }
+}
+.splide__slide {
+  width: 399px;
+  display: flex;
+}
+.splide__slide img {
+  width: 100%;
+  height: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.images {
+  background-color: #cdd5de;
+  border: 1px #042e5c solid;
+}
+.images__description {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.attributes {
+  background: #042e5c;
+  color: white;
+  display: flex;
+  flex-flow: row wrap;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  gap: 1rem 0.5rem;
+}
+.attributes > div {
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 992px) {
+  .attributes {
+    font-size: 1.5rem;
+  }
+}
+.attributes .material-symbols-outlined {
+  font-size: 36px;
 }/*# sourceMappingURL=style.css.map */
