@@ -6,7 +6,7 @@
     display: grid;
     justify-items: flex-start;
     justify-content: space-around;
-    grid-template-columns: repeat(auto-fit, 170px);
+    grid-template-columns: repeat(auto-fit, calc(180px));
 
     @include x(padding, 1rem);
 
@@ -22,7 +22,7 @@
         color: #DDE;
     }
     @include media-bp-up(lg) {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         @include x(padding, 10%);
     }
     .material-symbols-outlined {

@@ -2694,7 +2694,7 @@ h6 {
   display: grid;
   justify-items: flex-start;
   justify-content: space-around;
-  grid-template-columns: repeat(auto-fit, 170px);
+  grid-template-columns: repeat(auto-fit, 180px);
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.5rem;
@@ -2711,7 +2711,7 @@ h6 {
 }
 @media screen and (min-width: 992px) {
   .attributes {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding-left: 10%;
     padding-right: 10%;
   }
