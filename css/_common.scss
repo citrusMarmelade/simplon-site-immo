@@ -7,3 +7,7 @@
     @include block;
     @include x(margin, auto);
 }
+
+.double-br {
+    margin-bottom: 0.5em;
+}

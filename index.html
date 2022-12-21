@@ -22,13 +22,15 @@
 </head>
 
 <body>
-    <nav>
-
-    </nav>
+    <header class="nav row">
+        <div class="nav__title"><span>Gabriel Immobilier</span></div>
+    </header>
     <main>
-        <h1 class="text-center">Titre Principal</h1>
-        <h2 class="text-center">Titre Secondaire</h2>
-        <section class="container images">
+
+        <h1 class="mt-4 text-center">MAISON DE CHARME À VENDRE - PRIX À DÉBATTRE</h1>
+        <h2 class="text-center my-3">Charmante maison de ville avec jardin privé et garage</h2>
+        <section class="container images my-4">
+
             <img class="w-100" src="/images/principale.jpg" alt="JE SUIS UNE IMAGE">
             <div class="splide">
                 <div class="splide__track">
@@ -42,32 +44,53 @@
                     </div>
                 </div>
             </div>
+            <div class="images__attributes attributes">
+                <div><span class="material-symbols-outlined">nest_multi_room</span> 5 Pieces</div>
+                <div><span class="material-symbols-outlined">bedroom_parent</span> 2 Chambres</div>
+                <div><span class="material-symbols-outlined">garage_home</span> 1 Garage</div>
+                <div><span class="material-symbols-outlined">outdoor_garden</span> Jardin</div>
+                <div><span class="material-symbols-outlined">bathtub</span> 1 Salle de bain</div>
+            </div>
             <p class="h4 images__description">
                 À vendre : maison de charme située dans un quartier paisible et verdoyant. Cette maison de 2 chambres et
                 1 salles de bain offre un espace de vie confortable et accueillant, avec une grande cuisine ouverte sur
-                le salon.<br>
+                le salon.<br class="double-br">
 
                 Le jardin bien entretenu et clos de mur offre une oasis de verdure et de tranquillité, parfait pour se
-                détendre ou recevoir en toute intimité.<br>
+                détendre ou recevoir en toute intimité.<br class="double-br">
 
                 La maison dispose également d'un garage attenant et d'un grand grenier aménageable, offrant de
-                nombreuses possibilités d'agrandissement ou de rangement.<br>
+                nombreuses possibilités d'agrandissement ou de rangement.<br class="double-br">
 
                 Proche de toutes les commodités et bien desservie par les transports en commun, cette maison est idéale
                 pour une famille en quête de calme et de confort.<br>
             </p>
-            <div class="images__attributes attributes">
-                <div><span class="material-symbols-outlined">nest_multi_room</span> 5 pieces</div>
-                <div><span class="material-symbols-outlined">bedroom_parent</span> 2 chambres</div>
-                <div><span class="material-symbols-outlined">garage_home</span> 1 garage</div>
-                <div><span class="material-symbols-outlined">outdoor_garden</span> jardin</div>
-            </div>
         </section>
-        <aside>
-            <h2>Voir aussi...</h2>
+        <aside class="w-100 w-md-90 w-lg-80 mx-auto container my-4">
+            <h2 class="text-center">Voir aussi...</h2>
+            <div class="ads">
+                <div class="ads__ad">
+                    <img src="/images/choix1.jpg" alt="">
+                    <div class="ads__text">Maison</div>
+                    <div class="ads__text">Alès</div>
+                    <div class="ads__text"><span>120m²</span><span>144000€</span></div>
+                </div>
+                <div class="ads__ad">
+                    <img src="/images/choix2.jpg" alt="">
+                    <div class="ads__text">Maison</div>
+                    <div class="ads__text">Alès</div>
+                    <div class="ads__text"><span>100m²</span><span>150000€</span></div>
+                </div>
+                <div class="ads__ad">
+                    <img src="/images/choix3.jpg" alt="">
+                    <div class="ads__text">Maison</div>
+                    <div class="ads__text">Alès</div>
+                    <div class="ads__text"><span>110m²</span><span>220000€</span></div>
+                </div>
+            </div>
         </aside>
 
-        <form class="contact">
+        <form class="contact my-4">
             <div class="contact__img-container"><img class="img-responsive" src="images/olivier.png" width="200" alt="">
             </div>
             <h2 class="textsize-3">Intéréssés ?<br>
@@ -78,10 +101,18 @@
             <input class="contact__field--middle" type="text" name="nom" placeholder="Nom">
             <input class="contact__field--full-width" type="text" name="email" placeholder="Email">
             <textarea class="contact__field--full-width" name="message" placeholder="message" cols="1"
-                rows="1"></textarea>
+                rows="5"></textarea>
             <button class="btn btn-primary contact__field--full-width" type="submit">Envoyer</button>
         </form>
     </main>
+
+    <footer class="footer row">
+        <div class="nav__title">
+            Gabriel Immobilier
+        </div>
+        <div>Siret: ......<br>RCS: ......</div>
+    </footer>
+
     <script src="https://unpkg.com/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script>
         var splide = new Splide('.splide', {

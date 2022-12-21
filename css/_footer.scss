@@ -1,0 +1,13 @@
+@use "bootstrap2" as *;
+
+.footer {
+    box-shadow: 0 -2px 4px rgba(get_color(primary), 15%);
+
+    display: flex;
+    &__title {
+        padding: 1rem 0.5rem;
+        text-transform: uppercase;
+        margin-right: auto;
+    }
+
+}

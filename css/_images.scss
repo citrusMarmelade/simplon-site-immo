@@ -5,6 +5,6 @@
     border: 1px get_color(primary) solid;
 
     &__description {
-        @include x(padding, 1rem);
+        padding: 1rem;
     }
 }

@@ -3,10 +3,13 @@
 .attributes {
     background: get_color(primary);
     color: white;
-    display: flex;
-    flex-flow: row wrap;
+    display: grid;
+    justify-items: flex-start;
+    justify-content: space-around;
+    grid-template-columns: repeat(auto-fit, 170px);
 
     @include x(padding, 1rem);
+
     @include y(padding, 0.5rem);
 
     gap: 1rem 0.5rem;
@@ -14,8 +17,13 @@
         display: flex;
         align-items: center;
     }
+    .material-symbols-outlined {
+        margin-right: 0.5rem;
+        color: #DDE;
+    }
     @include media-bp-up(lg) {
         font-size: 1.5rem;
+        @include x(padding, 10%);
     }
     .material-symbols-outlined {
         font-size: 36px;

@@ -5,20 +5,20 @@
     $aspect-ratio: 1.33;
     $height: 200px;
     height: $height;
-    @include media-bp-up(lg) {
-        $height: 300px;
-        height: $height;
-        &__slide {
-            width: $height*$aspect-ratio;
-        }
-    }
     &__slide {
         width: $height*$aspect-ratio;
         display: flex;
         img {
             width: 100%;
-            height:auto;
+            height: auto;
             @include y(margin, auto);
+        }
+    }
+    @include media-bp-up(lg) {
+        $height: 300px;
+        height: $height;
+        &__slide {
+            width: $height*$aspect-ratio;
         }
     }
 }

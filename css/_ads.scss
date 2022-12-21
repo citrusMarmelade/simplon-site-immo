@@ -1,0 +1,33 @@
+@use "bootstrap2" as *;
+
+.ads {
+    width: 97.5%;
+    @include x(margin, auto);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+
+    @include media-bp-down(md) {
+        flex-direction: column;
+    }
+
+    &__ad {
+        max-width: 400px;
+        min-width: 25%; 
+        img {
+            width: 100%;
+        }
+        border: 2px get_color(primary) solid;
+        &:nth-child(odd) {
+            border-color: get_color(secondary);
+        }
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+    &__text {
+        @include x(padding, 1rem);
+        display:flex;
+        justify-content: space-between;
+    }
+}
